@@ -1,32 +1,35 @@
 #include <iostream>	
 #include <string>
-#include <vector>
 using namespace std;
 
 int main() {
-	int num, card, ans, tmp;
-	cin >> num;
-	string answer = "";
-	for (int i = 0; i < num; i++) {
-		cin >> card >> ans;
-		int value = 1;
-		vector<int> deq;
-		for (int j = 0; j < card; j++) {
-			cin >> tmp; deq.push_back(tmp);
-		}
-		int counting = 0; 
-		int max = deq.front();
-		for (int j = 0; j < card; j++) {
-			if (deq.at(j) > max) {
-				max = deq.at(j);
-				counting=1;
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+	int T, tmp; cin >> T;
+	int up = 1;
+	int ans;
+	for (int i = 0; i < T; i++) {
+		cin >> tmp;
+		ans = 16;
+		for (int j = 0; j < tmp; j++) {
+			if (ans == 31) up = 0;
+			if (ans == 17) up = 1;
+			if (up) {
+				if (tmp - j > 12) ans += 13;
+				else ans++;
 			}
-			if (deq.at(j) == max)
-				counting++;
+			else {
+				if (tmp - j > 12) ans -= 13;
+				else ans--;
+			}
 		}
-
-		answer += to_string(value) + '\n';
+		ans -= 16;
+		for (int j = 8; j >= 1; j /= 2) {
+			if (ans / j != 0) {
+				cout << "µþ±â"; ans -= j;
+			}
+			else cout << "V";
+		}
 	}
-	cout << answer;
 	return 0;
 }
