@@ -22,13 +22,13 @@
     <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\bits\stdc++.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="16134.cpp" />
+    <ClCompile Include="15471.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{0fbec723-faa3-47c1-97b2-331556fb43a4}</ProjectGuid>
-    <RootNamespace>ReposBAEK</RootNamespace>
+    <RootNamespace>ReposBOJ</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>ReposBOJ</ProjectName>
   </PropertyGroup>
