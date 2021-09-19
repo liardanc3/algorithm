@@ -1,50 +1,53 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define INF 1e7
+#define INF 987654321
 typedef pair<int, int> pii;
 int TC, N, M, W, S, E, T;
-int d[501][501];
+int d[501];
 vector<pii> vect[501];
-void fwa() {
-	priority_queue<pii, vector<pii>, greater<pii>> pq;
-	pq.push(pii(0, 1));
-	for (int i = 1; i <= N; i++) {
-		for (int j = 1; j <= N; j++) {
-			for (int k = 1; k <= N; k++) {
-				if (d[i][k] != INF && d[k][j] != INF)
-					d[i][j] = min(d[i][j], d[i][k] + d[k][j]);
-			}
-		}
-	}
-}
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL); cout.tie(NULL);
 	cin >> TC;
 	while (TC--) {
-		fill(&d[0][0], &d[500][501], INF);
+		
 		cin >> N >> M >> W;
+	
+		fill(&d[0], &d[501], INF);
+		//for (int i = 1; i <= N; i++)
+		//	d[i] = INF;
+
 		while (M--) {
 			cin >> S >> E >> T;
-			//vect[S].push_back(pii(E, T));
-			//vect[E].push_back(pii(S, T));
-			d[S][E] = min(d[S][E], T);
-			d[E][S] = min(d[E][S], T);
+			vect[S].push_back(pii(E, T));
+			vect[E].push_back(pii(S, T));
+			//d[S][E] = min(d[S][E], T);
+			//d[E][S] = min(d[E][S], T);
 		}
 		while (W--) {
 			cin >> S >> E >> T;
-			//vect[S].push_back(pii(E, -T));
-			d[S][E] = min(d[S][E], -T);
+			vect[S].push_back(pii(E, -T));
+			//d[S][E] = min(d[S][E], -T);
 		}
-		fwa();
-		int possible = 0;
+		
+		d[1] = 0;
+		int flag = 0;
 		for (int i = 1; i <= N; i++) {
-			if (d[i][i] < 0) {
-				possible = 1;
-				break;
+			for (int j = 1; j <= N; j++) {
+				for (int k = 0; k < vect[j].size(); k++) {
+					pii v = vect[j].at(k);
+					int next = v.first;
+					int dist = v.second;
+
+					if (d[next] > d[j] + dist) {
+						d[next] = d[j] + dist;
+						if (i == N)
+							flag = 1;
+					}
+				}
 			}
 		}
-		if (possible) cout << "YES\n";
+		if (flag) cout << "YES\n";
 		else cout << "NO\n";
 	}
 
