@@ -22,11 +22,14 @@ int main() {
 				s.pop();
 			} s.pop();
 		}
-		else if (str[i] == '(' || str[i] == ')' || str[i] == '*' || str[i] == '-' || str[i] == '+' || str[i] == '/') {
+		else if (str[i] == '(')
+			s.push(str[i]);
+
+		else if (str[i] == '*' || str[i] == '-' || str[i] == '+' || str[i] == '/') {
 			if (s.empty()) s.push(str[i]);
 			else {
 				while (!s.empty() && pri(s.top()) >= pri(str[i])) {
-					if (s.top() == '(' && str[i] != ')') break;
+					if (s.top() == '(') break;
 					str1 += s.top();
 					s.pop();
 				}
