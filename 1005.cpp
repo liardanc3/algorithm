@@ -1,40 +1,47 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef tuple<int, int, int> tii;
-priority_queue<tii, vector<tii>, less<tii>> pq;
-int T, N, K, tmp1, tmp2, F, pay[1001], tree[1001], mx;
-vector<int> vect[1001];
-int getRoot(int i) {
-	while (i != tree[i])
-		i = tree[i];
-	return i;
-}
-void dfs(int start,int sum) {
-	for (int i = 0; i < vect[start].size(); i++) {
-		int next = vect[start].at(i);
-		sum += pay[next];
-		if (mx < sum) mx = sum;
-		dfs(next, sum);
-		sum -= pay[next];
-	}
-}
-
+int T, N, K, D[1001], X, Y, W, cnt[1001], in[1001];
+queue<int> q;
 int main() {
 	cin >> T;
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
 	while (T--) {
+		vector<int> vect[1001];
+		memset(in, 0, sizeof(in));
+		memset(cnt, 0, sizeof(cnt));
 		cin >> N >> K;
-		for (int i = 1; i <= N; i++) {
-			cin >> pay[i];
-			vect[i].clear();
-		}
+		for (int i = 1; i <= N; i++)
+			cin >> D[i];
 		for (int i = 0; i < K; i++) {
-			cin >> tmp1 >> tmp2;
-			vect[tmp2].push_back(tmp1);
+			cin >> X >> Y;
+			vect[X].push_back(Y);
+			in[Y]++;
 		}
-		cin >> F;
-		mx = pay[F];
-		dfs(F, pay[F]);
-		cout << mx << '\n';
+		cin >> W;
+
+		for (int i = 1; i <= N; i++) {
+			if (in[i] == 0) {
+				q.push(i);
+				cnt[i] = D[i];
+			}
+		}
+
+		while (!q.empty()) {
+			int now = q.front();
+			q.pop();
+
+			for (int i = 0; i < vect[now].size(); i++) {
+				int next = vect[now].at(i);
+
+				cnt[next] = max(cnt[next], cnt[now] + D[next]);
+				in[next]--;
+				if (in[next] == 0)
+					q.push(next);
+			}
+		}
+		cout << cnt[W] << '\n';
 	}
+
 	return 0;
 }
