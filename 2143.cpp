@@ -2,8 +2,7 @@
 using namespace std;
 long long t, n, m, tmp;
 vector<int> nowA, nowB;
-map<int, long long> mapA, mapB;
-vector<int> num;
+vector<int> vectA, vectB;
 int main() {
 	cin >> t;
 	cin >> n;
@@ -22,32 +21,26 @@ int main() {
 		int sum = 0;
 		for (int j = i; j <= n; j++) {
 			sum += nowA.at(j);
-			if (mapA.find(sum) == mapA.end())
-				mapA.insert(pair<int, int>(sum, 1));
-			else
-				mapA[sum]++;
-			num.push_back(sum);
+			vectA.push_back(sum);
 		}
 	}
 	for (int i = 1; i <= m; i++) {
 		int sum = 0;
 		for (int j = i; j <= m; j++) {
 			sum += nowB.at(j);
-			if (mapB.find(sum) == mapB.end())
-				mapB.insert(pair<int, int>(sum, 1));
-			else
-				mapB[sum]++;
-			num.push_back(sum);
+			vectB.push_back(sum);
 		}
 	}
 	long long ret = 0;
 	
-	sort(num.begin(), num.end());
-	num.erase(unique(num.begin(), num.end()), num.end());
-	for (int i = 0; i < num.size(); i++) {
-		int now = num[i];
-		if(mapA.find(now)!=mapA.end() && mapB.find(t-now)!=mapB.end())
-			ret += mapA[now] * mapB[t - now];
+	sort(vectA.begin(), vectA.end());
+	sort(vectB.begin(), vectB.end());
+
+	for (int i = 0; i < vectA.size(); i++) {
+		int gap = t - vectA[i];
+		long long up = upper_bound(vectB.begin(), vectB.end(), gap) - vectB.end();
+		long long dn = lower_bound(vectB.begin(), vectB.end(), gap) - vectB.end();
+		ret += up - dn;
 	}
 	cout << ret;
 	return 0;
