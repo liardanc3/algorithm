@@ -21,20 +21,22 @@ int main() {
 		}
 
 		if (s.empty()) {
-			s.push(pii(now, 1));
-			continue;
+			s.push({ now,1 });
 		}
-		if (s.top().first == now) {
-			pii tmp = s.top();
-			s.pop();
-			ans += tmp.second;
-			if (!s.empty()) ans++;
-			tmp.second++;
-			s.push(tmp);
-			continue;
+		else {
+			if (s.top().first == now) {
+				int cnt = s.top().second;
+				s.pop();
+				ans += cnt;
+				if (!s.empty()) ans++;
+				s.push({ now,cnt + 1 });
+			}
+			else if (s.top().first > now) {
+				ans++;
+				s.push({ now,1 });
+			}
 		}
-		s.push(pii(now, 1));
-		ans++;
+
 	}
 	cout << ans;
 	return 0;
