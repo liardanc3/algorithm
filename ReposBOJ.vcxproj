@@ -22,7 +22,7 @@
     <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\bits\stdc++.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1509.cpp" />
+    <ClCompile Include="1316.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -128,6 +128,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <StackReserveSize>1073741824</StackReserveSize>
+      <OutputFile>D:\ReposBOJ\x64\Debug\ReposBOJ.exe</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
