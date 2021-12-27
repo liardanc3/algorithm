@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef pair<int, int> pii;
-int N, M, K, arr[11][11], mx = 0;
+int N, M, K, arr[11][11], mx = -10001;
 int visited[11][11]{ 0, };
-int dy[]{ -1,0,0,1,0 };
-int dx[]{ 0,-1,1,0,0 };
+int dy[]{ -1,0,0,1 };
+int dx[]{ 0,-1,1,0 };
 pii vect[4];
 void bt(int start, int now) {
 	if (now == K) {
@@ -16,11 +16,12 @@ void bt(int start, int now) {
 	}
 	for (int y = start; y <= N*M; y++) {
 		int i = y / M + 1;
-		if (y % N == 0) i--;
+		if (y % M == 0) i--;
 		int j = y % M;
-		if (y % N == 0) j = M;
+		if (y % M == 0) j = M;
 		bool flag = true;
-		for (int k = 0; k < 5; k++) {
+		if (visited[i][j]) continue;
+		for (int k = 0; k < 4; k++) {
 			int y = i + dy[k];
 			int x = j + dx[k];
 			if (1 <= y && y <= N && 1 <= x && x <= M) {
@@ -32,10 +33,8 @@ void bt(int start, int now) {
 		}
 		if (flag) {
 			visited[i][j] = 1;
-			vect[now++] = { i,j };
-			if (j)
-				bt(y + 1, now);
-			now--;
+			vect[now] = { i,j };
+			bt(y+1, now+1);
 			visited[i][j] = 0;
 		}
 	}
