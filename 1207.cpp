@@ -23,7 +23,6 @@ void bt(int now) {
 	do {
 		bool possible = true;
 		memset(arr, 0, sizeof(arr));
-		int right = 0, bottom = 0;
 		for (int idx = 0; idx < 5 && possible; idx++) {
 			int i = permu[idx] - 1;
 			int y = 0, x = 0;
