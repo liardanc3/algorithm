@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="20440.cpp">
+    <ClCompile Include="10986.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
