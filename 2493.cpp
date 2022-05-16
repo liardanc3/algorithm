@@ -8,12 +8,12 @@ int main() {
 	for (int i = 1; i <= n; i++) {
 		cin >> arr[i];
 		for (int j = i - 1; j >= 1; j--) {
-			if (arr[j] >= arr[i]) {
+			if (arr[j] > arr[i]) {
 				rasor[i] = j;
 				break;
 			}
-			if (arr[j] < arr[i]) {
-				if (arr[rasor[j]] >= arr[i]) {
+			if (arr[j] <= arr[i]) {
+				if (arr[rasor[j]] > arr[i]) {
 					rasor[i] = rasor[j];
 					break;
 				}
