@@ -1,22 +1,20 @@
 ﻿#include <bits/stdc++.h>
 using namespace std;
-typedef pair<int, int> pii;
+int t, tmp;
 vector<int> vect;
-vector<pii> _list;
-int n, sum;
 int main() {
-    for (int i = 1; i <= 8; i++) {
-        cin >> n;
-        _list.push_back({ n,i });
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+    cin >> t;
+    while (t--) {
+        for (int i = 0; i < 10; i++) {
+            cin >> tmp;
+            vect.push_back(tmp);
+        }
+        sort(vect.begin(), vect.end());
+
+        cout << vect[7] << '\n';
+        vect.clear();
     }
-    sort(_list.rbegin(), _list.rend());
-    for (int i = 0; i < 5; i++) {
-        sum += _list[i].first;
-        vect.push_back(_list[i].second);
-    }
-    sort(vect.begin(), vect.end());
-    cout << sum << '\n';
-    for (int i = 0; i < 5; i++)
-        cout << vect[i] << ' ';
     return 0;
 }
