@@ -1,14 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
-string s;
-vector<string> vect;
+int t, n, arr[2], tmp;
 int main() {
-	cin >> s;
-	for (int i = 0; i < s.size(); i++) {
-		vect.push_back(s.substr(i, s.size()));
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+	cin >> t;
+	while (t--) {
+		memset(arr, 0, sizeof(arr));
+		cin >> n;
+		while (n--) {
+			cin >> tmp;
+			arr[tmp % 2]++;
+		}
+		cout << min(arr[0], arr[1]) << '\n';
 	}
-	sort(vect.begin(), vect.end());
-	for (string str : vect)
-		cout << str << '\n';
 	return 0;
 }
