@@ -1,26 +1,26 @@
 ﻿#include <bits/stdc++.h>
 using namespace std;
-typedef tuple<int, int, int, string> student;
-int n, a, b, c;
-string name;
-vector<student> vect;
-bool cmp(student& a, student& b) {
-	if (get<0>(a) != get<0>(b))
-		return get<0>(a) > get<0>(b);
-	if (get<1>(a) != get<1>(b))
-		return get<1>(a) < get<1>(b);
-	if (get<2>(a) != get<2>(b))
-		return get<2>(a) > get<2>(b);
-	return get<3>(a) < get<3>(b);
-}
+
+typedef pair<int, int> pii;
+priority_queue<pii> pq;
+
+vector<int> vect;
+int N, M, arr[1000001];
 int main() {
-	cin >> n;
-	while (n--) {
-		cin >> name >> a >> b >> c;
-		vect.push_back({ a,b,c,name });
+	ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+	cin >> N >> M;
+	for (int i = 1; i <= N; i++)
+		cin >> arr[i];
+	for (int i = M - (M - 1); i < M + (M - 1); i++)
+		pq.push({ arr[i],i });
+	for (int i = M + (M - 1), j = M; j <= N - M + 1; i++, j++) {
+		if (i <= N)
+			pq.push({ arr[i],i });
+		while (j - pq.top().second >= M)
+			pq.pop();
+		vect.push_back(pq.top().first);
 	}
-	sort(vect.begin(), vect.end(), cmp);
-	for (student s : vect)
-		cout << get<3>(s) << '\n';
+	for (int i : vect)
+		cout << i << ' ';
 	return 0;
 }
