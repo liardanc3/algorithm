@@ -6,7 +6,7 @@ vector<int> vect, vect1, vect2;
 int N, C, tmp, sum, ans;
 
 void f1(int left, int right, int sum) {
-    for (int i = left+1; i <= right; i++) {
+    for (int i = left + 1; i <= right; i++) {
         vect1.push_back(sum + vect[i]);
         f1(i, right, sum + vect[i]);
     }
