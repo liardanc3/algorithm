@@ -20,10 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="init.txt">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="AlgorithmCPP\Algorithm\test.cpp">
+    <ClCompile Include="Algorithm\test.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
