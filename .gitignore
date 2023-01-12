@@ -1,7 +1,7 @@
-/백준 복습 진행도.txt
 CPP/.vs
 CPP/AlgorithmCPP.sln
 CPP/AlgorithmCPP.vcxproj
 CPP/AlgorithmCPP.vcxproj.filters
 CPP/AlgorithmCPP.vcxproj.user
-/.gitignore
+*.txt
+.gitignore
