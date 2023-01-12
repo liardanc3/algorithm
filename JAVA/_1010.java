@@ -1,5 +1,3 @@
-package Algorithm;
-
 import java.io.*;
 
 public class _1010 {
