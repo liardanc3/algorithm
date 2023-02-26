@@ -20,7 +20,7 @@ signed main() {
 			int y = vect[yidx];
 			int x = vect[xidx];
 			while (xidx <= yidx) {
-				if (z + y + x == k) {
+				if (z + y + x == k ) {
 					cout << k;
 					return 0;
 				}
