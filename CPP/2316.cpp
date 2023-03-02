@@ -6,14 +6,14 @@ struct node {
 	node(int n, int c, int r) {
 		next = n, capacity = c, revidx = r;
 	}
-}; vector<node> vect[801];
+}; vector<node> vect[802];
 
-int N, P, a, b, idx[801], level[801], mx;
+int N, P, a, b, idx[802], level[802], mx;
 int bfs() {
 	memset(level, -1, sizeof(level));
-	level[1] = 0;
+	level[2] = 0;
 	queue<int> q;
-	q.push(1);
+	q.push(2);
 	while (!q.empty()) {
 		int now = q.front(); q.pop();
 
@@ -27,10 +27,10 @@ int bfs() {
 			}
 		}
 	}
-	return level[401] == -1 ? 0 : 1;
+	return level[5] == -1 ? 0 : 1;
 }
 int dfs(int now, int wat) {
-	if (now == 401)
+	if (now == 4)
 		return wat;
 	for (int& i = idx[now]; i < vect[now].size(); i++) {
 		int next = vect[now][i].next;
@@ -49,28 +49,42 @@ int dfs(int now, int wat) {
 	return 0;
 }
 int main() {
-	ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
-	cin >> N >> P;
-	while (P--) {
-		cin >> a >> b;
+	[&]() {
+		ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+		cin >> N >> P;
+		while (P--) {
+			cin >> a >> b;
 
-		// a -> b
-		vect[a].push_back({ b, 1, (int)vect[b].size() });
-		vect[b].push_back({ a, 0, (int)vect[a].size() - 1 });
+			// 2a+1 -> 2b
+			vect[2 * a + 1].push_back({ 2 * b,1,(int)vect[2 * b].size() });
+			vect[2 * b].push_back({ 2 * a + 1,0,(int)vect[2 * a + 1].size() - 1 });
+			// 2b+1 -> 2a
+			vect[2 * b+1].push_back({ 2 * a ,1,(int)vect[2 * a].size() });
+			vect[2 * a].push_back({ 2 * b+1,0,(int)vect[2 * b+1].size() -1 });
+		}
+		for (int i = 1; i <= 2; i++) {
+			vect[2 * i].push_back({ 2 * i + 1, 1'000'000'000, (int)vect[2 * i + 1].size() });
+			vect[2 * i + 1].push_back({ 2 * i,0,(int)vect[2 * i].size() - 1 });
+
+			vect[2 * i + 1].push_back({ 2 * i, 1'000'000'000, (int)vect[2 * i].size() });
+			vect[2 * i].push_back({ 2 * i + 1, 0, (int)vect[2 * i + 1].size() - 1 });
+		}
+		for (int i = 3; i <= 400; i++) {
+			vect[2 * i].push_back({ 2 * i + 1, 1, (int)vect[2 * i + 1].size() });
+			vect[2 * i + 1].push_back({ 2 * i,0,(int)vect[2 * i].size() - 1 });
+
+			vect[2 * i + 1].push_back({ 2 * i,1,(int)vect[2 * i].size() });
+			vect[2 * i].push_back({ 2 * i + 1, 0, (int)vect[2 * i + 1].size() - 1 });
+		}
+	}();
 	
-		// b(+400) -> a(+400)
-		if (a != 2) a += 400;
-		if (b != 2) b += 400;
-		vect[b].push_back({ a, 1, (int)vect[a].size() });
-		vect[a].push_back({ b, 0, (int)vect[b].size() - 1 });
-	}
 	while (bfs()) {
 		memset(idx, 0, sizeof(idx));
 		while (1) {
-			int flow = dfs(1, 1e9);
+			int flow = dfs(2, 1e9);
 			if (!flow)
 				break;
-			mx += flow;
+			mx++;
 		}
 	}
 	cout << mx;
