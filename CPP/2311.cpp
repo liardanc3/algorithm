@@ -82,7 +82,7 @@ signed main() {
 		// out -> a
 		setedge(out, a, 1, 0);
 	}
-	spfa();
+	spfa();;
 	t += dist[N];
 	dfs(1, 1e9);
 	spfa();
