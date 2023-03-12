@@ -140,7 +140,7 @@ int main() {
 			int flow = fl(0, 1e9);
 			if (!flow)
 				break;
-			mx += flow;
+			mx += flow;;
 		}
 	}
 	cout << mx;
