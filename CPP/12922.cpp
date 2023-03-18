@@ -48,26 +48,12 @@ void setnode() {
 			int end3 = (ddy3 - 1) * N + ddx3; end3 += end3;
 
 			if (1 <= ddy1 && ddy1 <= N && 1 <= ddx1 && ddx1 <= N) {
-				if (arr[ddy1][ddx1] > 0) {
-					if (arr[ddy1][ddx1] == 1)
-						addedge(start + 1, end1, 1e9);
-					if (arr[ddy1][ddx1] == 2)
-						addedge(start + 1, end1, 1e9);
-					if (arr[ddy1][ddx1] == 3)
-						addedge(start + 1, end1, 1e9);
-				}
-
-
+				if (arr[ddy1][ddx1] > 0) 
+					addedge(start + 1, end1, 1e9);
 			}
 			if (1 <= ddy2 && ddy2 <= N && 1 <= ddx2 && ddx2 <= N) {
-				if (arr[ddy2][ddx2] > 0) {
-					if (arr[ddy2][ddx2] == 1)
-						addedge(start + 1, end2, 1e9);
-					if (arr[ddy2][ddx2] == 2)
-						addedge(start + 1, end2, 1e9);
-					if (arr[ddy2][ddx2] == 3)
-						addedge(start + 1, end2, 1e9);
-				}
+				if (arr[ddy2][ddx2] > 0) 
+					addedge(start + 1, end2, 1e9);
 			}
 			if (1 <= ddy3 && ddy3 <= N && 1 <= ddx3 && ddx3 <= N) {
 				if (arr[ddy3][ddx3] == 0)
@@ -78,21 +64,7 @@ void setnode() {
 					q.push({ ddy3,ddx3 });
 				}
 
-				if (arr[ddy3][ddx3] == 1) {
-					if (arr[ddy1][ddx1] > 0)
-						addedge(end1 + 1, end3, 1e9);
-					if (arr[ddy2][ddx2] > 0)
-						addedge(end2 + 1, end3, 1e9);
-				}
-
-				if (arr[ddy3][ddx3] == 2) {
-					if (arr[ddy1][ddx1] > 0)
-						addedge(end1 + 1, end3, 1e9);
-					if (arr[ddy2][ddx2] > 0)
-						addedge(end2 + 1, end3, 1e9);
-				}
-
-				if (arr[ddy3][ddx3] == 3) {
+				if (arr[ddy3][ddx3] > 0) {
 					if (arr[ddy1][ddx1] > 0)
 						addedge(end1 + 1, end3, 1e9);
 					if (arr[ddy2][ddx2] > 0)
