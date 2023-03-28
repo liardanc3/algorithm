@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define int long long
 using namespace std;
 
 int k, w[2'250'100], mx, total, add;
