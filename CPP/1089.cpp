@@ -35,7 +35,7 @@ void f() {
 		cout << -1;
 	else {
 		for (int i = N - 1, j = 0; i >= 0; i--, j++) {
-			int upper = pow(10, i);
+			int upper = pow(10, i); 
 
 			for (int num : vect[j])
 				sum += num * upper * total/vect[j].size();
