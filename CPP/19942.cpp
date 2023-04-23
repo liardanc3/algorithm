@@ -50,7 +50,7 @@ int main() {
 	else {
 		cout << mn << '\n';
 		for (int i : ans)
-			cout << i << ' ';
+			cout << i+1 << ' ';
 	}
 	return 0;
 }
