@@ -27,7 +27,6 @@ public class _1436 {
             }
         }
         Collections.sort(list);
-
         bw.write(Integer.toString(list.get(N-1)));
         bw.flush();
         bw.close();
