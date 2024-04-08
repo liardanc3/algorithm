@@ -8,7 +8,6 @@ public class _1978 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
         for(int i=2; i<=1000; i++){
             boolean isPrime = true;
             for(int j=2; j*j<=i && isPrime; j++){
