@@ -7,9 +7,7 @@ public class _1181 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
         List<String> list = new ArrayList<>();
-
         int N = Integer.parseInt(br.readLine());
         while(N-- > 0){
             String input = br.readLine();
