@@ -11,7 +11,6 @@ public class _1010 {
                 C[i][j]=C[i-1][j]+C[i-1][j-1];
         }
     }
-
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
