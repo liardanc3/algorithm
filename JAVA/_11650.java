@@ -19,7 +19,6 @@ public class _11650 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int N = Integer.parseInt(br.readLine());
-
         List<Point> pointList = new ArrayList<>();
         while(N-- > 0){
             String[] input = br.readLine().split(" ");
