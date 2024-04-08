@@ -6,7 +6,6 @@ public class _7568 {
     public static void main(String[] args) throws IOException{
         class Human{
             int weight, height, idx;
-
             public Human(int weight, int height, int idx) {
                 this.weight = weight;
                 this.height = height;
@@ -15,7 +14,6 @@ public class _7568 {
         }
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
         List<Human> list = new ArrayList<>();
         int N = Integer.parseInt(br.readLine());
         for(int i=0; i<N; i++){
