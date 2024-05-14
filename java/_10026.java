@@ -39,7 +39,7 @@ public class _10026 {
         }
         for(int i=1; i<=N; i++){
             for(int j=1; j<=N; j++){
-                if(visited1[i][j] == 0){
+                if(visited2[i][j] == 0){
                     count2++;
                     dfs2(i, j, arr[i][j]);
                 }
@@ -68,7 +68,7 @@ public class _10026 {
             int ddy = y + dy[i];
             int ddx = x + dx[i];
 
-            if(1<=ddy&&ddy<=N&&1<=ddx&&ddx<=N&&arr[ddy][ddx]%2==color&&visited1[ddy][ddx]==0)
+            if(1<=ddy&&ddy<=N&&1<=ddx&&ddx<=N&&arr[ddy][ddx]%2==color%2&&visited2[ddy][ddx]==0)
                 dfs2(ddy,ddx, color);
         }
     }
