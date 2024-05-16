@@ -5,71 +5,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26fd45ae-d7a1-40f1-989d-c0b01f4410ad" name="Changes" comment="BOJ">
-      <change afterPath="$PROJECT_DIR$/src/main/java/_15650.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1001.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1001.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_10026.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_10026.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1003.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1003.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1008.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1008.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1010.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1010.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1012.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1012.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1074.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1074.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_10773.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_10773.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_10815.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_10815.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_10816.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_10816.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11047.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11047.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1107.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1107.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11279.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11279.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11286.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11286.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11399.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11399.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11403.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11403.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11650.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11650.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11659.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11659.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11723.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11723.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11724.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11724.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11726.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11726.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11727.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11727.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11728.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_11728.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1181.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1181.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1260.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1260.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1330.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1330.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1389.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1389.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1436.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1436.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_14500.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_14500.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1463.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1463.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_14940.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_14940.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1541.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1541.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1620.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1620.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_16928.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_16928.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1697.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1697.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_17219.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_17219.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_17626.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_17626.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1764.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1764.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_18110.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_18110.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_18111.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_18111.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_18870.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_18870.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1927.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1927.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1931.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1931.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1978.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1978.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_20529.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_20529.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2108.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_2108.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_21736.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_21736.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2178.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_2178.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2579.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_2579.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2606.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_2606.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2630.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_2630.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2667.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_2667.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2805.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_2805.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_5430.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_5430.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_5525.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_5525.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_6064.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_6064.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_7568.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_7568.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_7569.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_7569.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_7576.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_7576.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_7662.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_7662.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_9019.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_9019.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_9095.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_9095.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_9375.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_9375.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_9461.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_9461.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1001.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_10026.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1003.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1008.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1010.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1012.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1074.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_10773.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_10815.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_10816.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11047.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1107.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11279.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11286.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11399.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11403.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11650.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11659.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11723.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11724.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11726.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11727.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_11728.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1181.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1260.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1330.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1389.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1436.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_14500.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1463.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_14940.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1541.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1620.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_16928.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1697.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_17219.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_17626.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1764.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_18110.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_18111.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_18870.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1927.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1931.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1978.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_20529.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2108.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_21736.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2178.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2579.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2606.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2630.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2667.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2805.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_5430.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_5525.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_6064.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_7568.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_7569.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_7576.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_7662.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_9019.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_9095.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_9375.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_9461.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,6 +194,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\uusei\OneDrive\바탕 화면\algorithm\java\src\main" />
       <recent name="C:\Users\uusei\OneDrive\바탕 화면\algorithm\java\src\main\java" />
     </key>
   </component>
@@ -308,6 +309,7 @@
       <workItem from="1715866018097" duration="88000" />
       <workItem from="1715866155796" duration="300000" />
       <workItem from="1715866473119" duration="524000" />
+      <workItem from="1715867805387" duration="85000" />
     </task>
     <task id="LOCAL-00009" summary="BOJ - bruteforcing">
       <option name="closed" value="true" />
@@ -718,7 +720,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
