@@ -4,73 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26fd45ae-d7a1-40f1-989d-c0b01f4410ad" name="Changes" comment="BOJ">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1001.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_10026.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1003.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1008.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1010.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1012.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1074.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_10773.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_10815.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_10816.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11047.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1107.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11279.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11286.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11399.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11403.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11650.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11659.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11723.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11724.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11726.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11727.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_11728.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1181.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1260.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1330.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1389.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1436.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_14500.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1463.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_14940.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1541.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1620.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_16928.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1697.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_17219.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_17626.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1764.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_18110.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_18111.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_18870.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1927.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1931.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_1978.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_20529.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2108.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_21736.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2178.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2579.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2606.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2630.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2667.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_2805.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_5430.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_5525.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_6064.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_7568.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_7569.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_7576.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_7662.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_9019.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_9095.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_9375.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_9461.java" beforeDir="false" />
-    </list>
+    <list default="true" id="26fd45ae-d7a1-40f1-989d-c0b01f4410ad" name="Changes" comment="BOJ" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,14 +27,12 @@
     &quot;assignee&quot;: &quot;liardanc3&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="841780ef-863f-4e19-972e-cfa3830106af" />
-        <option name="url" value="https://github.com/liardanc3/Algorithm.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/liardanc3/algorithm.git",
+    "accountId": "1be3c7be-0444-4b49-b6dc-4d795e05dee1"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.jdks/corretto-11.0.17/lib/src.zip!/java.base/java/lang/Math.java" root0="SKIP_INSPECTION" />
   </component>
@@ -179,7 +111,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "corretto-15",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/uusei/OneDrive/바탕 화면/algorithm/java",
+    "last_opened_file_path": "C:/Users/liard/OneDrive/바탕 화면/algorithm",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -236,9 +168,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
-        <option value="jdk-15.0.10-azul-15.0.10-4caba194b151-739f9a4f" />
-        <option value="jdk-15.0.2-corretto-15.0.2-4caba194b151-9bc2d75a" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -310,6 +241,7 @@
       <workItem from="1715866155796" duration="300000" />
       <workItem from="1715866473119" duration="524000" />
       <workItem from="1715867805387" duration="85000" />
+      <workItem from="1717994451660" duration="37000" />
     </task>
     <task id="LOCAL-00009" summary="BOJ - bruteforcing">
       <option name="closed" value="true" />
@@ -720,7 +652,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
