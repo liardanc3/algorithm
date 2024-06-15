@@ -9,7 +9,7 @@ public class _9663 {
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static StringBuilder sb = new StringBuilder();
     public static int N, answer;
-    public static int[] visited = new int[61];
+    public static int[][] visited = new int[16][16];
     public static int[] dy = new int[]{-1, -1, -1};
     public static int[] dx = new int[]{-1, 0, 1};
 
