@@ -8,7 +8,7 @@ public class _10818 {
 
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static StringBuilder sb = new StringBuilder();
-    public static int N, mn, mx;
+    public static int N, mn = 123123123, mx = -1231231232;
 
     public static void main(String[] args) throws IOException {
         N = Integer.parseInt(br.readLine());
