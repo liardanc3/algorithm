@@ -11,28 +11,30 @@ public class _30805 {
 
     public static class Pair {
         int num;
-        int idx;
+        int aIdx;
+        int bIdx;
 
-        public Pair(int num, int idx) {
+        public Pair(int num, int aIdx, int bIdx) {
             this.num = num;
-            this.idx = idx;
+            this.aIdx = aIdx;
+            this.bIdx = bIdx;
         }
     }
 
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static StringBuilder sb = new StringBuilder();
-    public static int N, M, top, topIdx;
+    public static int N, M;
     public static int[] a = new int[101];
     public static int[] b = new int[101];
-    public static int[] pick = new int[101];
-    public static int[][] arr = new int[101][101];
-    public static List<Integer> answer = new ArrayList<>();
+    public static List<Integer> list = new ArrayList<>();
     public static PriorityQueue<Pair> pq = new PriorityQueue<>(
             (p1, p2) -> {
-                if(p1.num != p2.num) {
+                if(p1.num != p2.num){
                     return p1.num < p2.num ? 1 : -1;
+                } else if(p1.aIdx != p2.aIdx) {
+                    return p1.aIdx > p2.aIdx ? 1 : -1;
                 } else {
-                    return p1.idx > p2.idx ? 1 : -1;
+                    return p1.bIdx > p2.bIdx ? 1 : -1;
                 }
             }
     );
@@ -52,52 +54,30 @@ public class _30805 {
             b[i] = Integer.parseInt(input[i - 1]);
         }
 
-        for (int i = 1; i <= N; i++) {
-            for (int j = 1; j <= M; j++) {
-                if(a[i] == b[j]) {
-                    arr[i][j] = Math.max(Math.max(arr[i-1][j-1], arr[i][j-1]), arr[i-1][j-1] + 1);
-                    pick[j] = 1;
-                } else {
-                    arr[i][j] = Math.max(arr[i][j-1], arr[i-1][j]);
+        for(int i=1; i<=N; i++){
+            for(int j=1; j<=M; j++){
+                if(a[i] == b[j]){
+                    pq.add(new Pair(a[i],i,j));
                 }
             }
         }
 
-        int now = 0;
-        int nowMx = 0;
-        for(int i = 1; i <= M; i++) {
-            if(arr[N][i] == now && arr[N][i] != 0 && pick[i] == 1){
-                nowMx = Math.max(nowMx, b[i]);
-            }
-            if(arr[N][i] > now){
-                pq.add(new Pair(nowMx, now));
-                nowMx = b[i];
-                now = arr[N][i];
-
-                if(i == M){
-                    pq.add(new Pair(nowMx, now));
-                }
-            }
-        }
-        
+        int aIdxNow = -1;
+        int bIdxNow = -1;
         while(!pq.isEmpty()){
-            Pair p = pq.poll();
+            Pair pair = pq.poll();
 
-            int num = p.num;
-            int idx = p.idx;
-
-            if(topIdx < idx){
-                answer.add(num);
-                topIdx = idx;
+            if(aIdxNow < pair.aIdx && bIdxNow < pair.bIdx){
+                list.add(pair.num);
+                aIdxNow = pair.aIdx;
+                bIdxNow = pair.bIdx;
             }
         }
 
-        sb.append(answer.size()).append("\n");
-        for (Integer num : answer) {
-            sb.append(num).append(" ");
+        System.out.println(list.size());
+        for(int i=0; i<list.size(); i++){
+            System.out.printf(list.get(i) + " ");
         }
-
-        System.out.println(sb);
     }
 }
 
