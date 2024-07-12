@@ -26,50 +26,12 @@ public class Main {
     public static List<Integer> root = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
+        int cnt = 0;
         while(!(input = br.readLine()).equals("S")){
-            String[] data = input.split(",");
 
-            devcMac = data[0];
-            a = Long.parseLong(data[1]);
-            b = Long.parseLong(data[2]);
-
-            m.compute(devcMac, (key, list) -> {
-                if (list == null) {
-                    list = new ArrayList<>();
-                }
-                list.add(new Pll(a, b));
-                return list;
-            });
+            sb.append(input).append(" ");
         }
 
-        for (String key : m.keySet()) {
-            List<Pll> list = m.get(key);
-
-            for(int i = 0; i< list.size() - 1; i++){
-
-                long cellParent = list.get(i).a;
-
-                if(i == 0){
-                    root.add((int)cellParent);
-                }
-
-                if(list.size() != 1){
-                    long cellChild = list.get(i+1).a;
-                    parent[(int) cellChild] = (int) cellParent;
-                }
-            }
-        }
-
-        while(true){
-            String input = br.readLine();
-
-            int now = Integer.parseInt(input);
-            System.out.println(now + "->");
-            while(now != 0){
-                System.out.print(parent[now] + "->");
-                now = parent[now];
-            }
-            System.out.println();
-        }
+        System.out.println("SADD MAC " + sb);
     }
 }
