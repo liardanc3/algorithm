@@ -7,58 +7,96 @@ public class Main {
 
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    public static StringBuilder sb = new StringBuilder();
     public static String input;
-    public static int n, m, nIdx = -1, mIdx = -1, len;
-    public static Map<Integer, Queue<Integer>> nNumber2IdxMap = new HashMap<>();
-    public static Map<Integer, Queue<Integer>> mNumber2IdxMap = new HashMap<>();
-    public static int[] arrN = new int[100];
-    public static int[] arrM = new int[100];
-    public static int[] answer = new int[100];
+    public static int n, m, k;
+    public static int[] tree = new int[1001];
+    public static List<int[]> edges = new ArrayList<>();
+    public static List<Integer> result = new ArrayList<>();
+
+    public static int getRoot(int i) {
+        return (tree[i] == i) ? i : (tree[i] = getRoot(tree[i]));
+    }
 
     public static void main(String[] args) throws IOException {
-        n = Integer.parseInt(br.readLine());
-        arrN = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-        for (int i = 0; i < n; i++) {
-            Queue<Integer> idx = nNumber2IdxMap.getOrDefault(arrN[i], new ArrayDeque<>());
-            idx.add(i);
-            nNumber2IdxMap.put(arrN[i], idx);
-        }
 
-        m = Integer.parseInt(br.readLine());
-        arrM = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        input = br.readLine();
+        n = Integer.parseInt(input.split(" ")[0]);
+        m = Integer.parseInt(input.split(" ")[1]);
+        k = Integer.parseInt(input.split(" ")[2]);
+
         for (int i = 0; i < m; i++) {
-            Queue<Integer> idx = mNumber2IdxMap.getOrDefault(arrM[i], new ArrayDeque<>());
-            idx.add(i);
-            mNumber2IdxMap.put(arrM[i], idx);
+            input = br.readLine();
+            String[] arr = input.split(" ");
+            int color = arr[0].equals("B") ? 0 : 1;
+            int a = Integer.parseInt(arr[1]);
+            int b = Integer.parseInt(arr[2]);
+            edges.add(new int[]{color, a, b});
         }
 
-        for (int i = 100; i >= 1; i--) {
-            if (nNumber2IdxMap.containsKey(i) && mNumber2IdxMap.containsKey(i)) {
-                Queue<Integer> nIdxQ = nNumber2IdxMap.get(i);
-                Queue<Integer> mIdxQ = mNumber2IdxMap.get(i);
+        for (int i = 1; i <= n; i++) tree[i] = i;
+        for (int[] e : edges) {
+            if (e[0] == 1) {
+                int ra = getRoot(e[1]);
+                int rb = getRoot(e[2]);
+                if (ra != rb) tree[ra] = rb;
+            }
+        }
 
-                while (!nIdxQ.isEmpty()) {
-                    Integer nIdxNow = nIdxQ.poll();
+        boolean[] isEssential = new boolean[m];
+        int currentBlue = 0;
 
-                    while (nIdxNow > nIdx && !mIdxQ.isEmpty()) {
-                        Integer mIdxNow = mIdxQ.poll();
-
-                        if (mIdxNow > mIdx) {
-                            answer[len++] = i;
-                            mIdx = mIdxNow;
-                            nIdx = nIdxNow;
-                        }
-                    }
+        for (int i = 0; i < m; i++) {
+            int[] e = edges.get(i);
+            if (e[0] == 0) {
+                int ra = getRoot(e[1]);
+                int rb = getRoot(e[2]);
+                if (ra != rb) {
+                    tree[ra] = rb;
+                    isEssential[i] = true;
+                    result.add(i);
+                    currentBlue++;
                 }
             }
         }
 
-        bw.write(len + "\n");
-        for (int i = 0; i < len; i++) {
-            bw.write(answer[i] + " ");
+        for (int i = 1; i <= n; i++) tree[i] = i;
+
+        for (int e : result) {
+            tree[getRoot(edges.get(e)[1])] = getRoot(edges.get(e)[2]);
         }
-        bw.flush();
-        bw.close();
+
+        for (int i = 0; i < m; i++) {
+            int[] e = edges.get(i);
+            if (e[0] == 0 && !isEssential[i] && currentBlue < k) {
+                int ra = getRoot(e[1]);
+                int rb = getRoot(e[2]);
+                if (ra != rb) {
+                    tree[ra] = rb;
+                    result.add(i);
+                    currentBlue++;
+                }
+            }
+        }
+
+        for (int i = 0; i < m; i++) {
+            int[] e = edges.get(i);
+            if (e[0] == 1) {
+                int ra = getRoot(e[1]);
+                int rb = getRoot(e[2]);
+                if (ra != rb) {
+                    tree[ra] = rb;
+                    result.add(i);
+                }
+            }
+        }
+
+        if (result.size() == n - 1 && currentBlue == k) {
+            for (int e : result) {
+                bw.write(edges.get(e)[1] + " " + edges.get(e)[2] + "\n");
+            }
+            bw.flush();
+        } else {
+            System.out.println(0);
+        }
     }
 }
