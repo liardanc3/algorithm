@@ -9,65 +9,51 @@ public class Main {
     public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     public static String input;
     public static String[] inputArr;
-    public static int n, m, k, conn;
-    public static int[] owner = new int[100001];
-    public static int[] tree = new int[100001];
-    public static long[] companyPoint = new long[100001];
-    public static Map<Integer, Map<Integer, Integer>> rootAndCompanyCntMap = new HashMap<>();
-    public static PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> -a[0]));
+    public static int n, m, u, v, c, k, conn;
+    public static long w;
+    public static int[][] tree = new int[18][200001];
+    public static PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[2]));
 
-    public static int getRoot(int i) {
-        return (tree[i] == i) ? i : (tree[i] = getRoot(tree[i]));
+    public static int getRoot(int pow, int i) {
+        while (tree[pow][i] != i) {
+            i = tree[pow][i] = tree[pow][tree[pow][i]];
+        }
+        return i;
     }
 
     public static void mst() {
-        for (int i = 1; i <= n; i++) {
-            tree[i] = i;
-            int finalI = i;
-            rootAndCompanyCntMap.put(i, new HashMap<>() {{
-                put(owner[finalI], 1);
-            }});
-        }
-
         while (!pq.isEmpty() && conn < n - 1) {
             int[] edge = pq.poll();
 
-            int w = edge[0];
-            int a = edge[1];
-            int b = edge[2];
+            u = edge[0];
+            v = edge[1];
+            c = edge[2];
+            k = edge[3];
 
-            int ra = getRoot(a);
-            int rb = getRoot(b);
+            int pow = 31 - Integer.numberOfLeadingZeros(k);
+            int ru = getRoot(pow, u);
+            int rv = getRoot(pow, v);
 
-            if (ra != rb) {
+            if (ru == rv) {
+                continue;
+            }
+
+            tree[pow][ru] = rv;
+
+            if (k == 1) {
                 conn++;
+                w += c;
+                continue;
+            }
 
-                Map<Integer, Integer> aCompanyAndCntMap = rootAndCompanyCntMap.getOrDefault(ra, new HashMap<>());
-                Map<Integer, Integer> bCompanyAndCntMap = rootAndCompanyCntMap.getOrDefault(rb, new HashMap<>());
+            int range = (int) Math.pow(2, pow - 1);
+            int delta = k - range;
 
-                if (aCompanyAndCntMap.size() < bCompanyAndCntMap.size()) {
-                    int tmp = ra;
-                    ra = rb;
-                    rb = tmp;
-                }
-                tree[rb] = ra;
-
-                Map<Integer, Integer> bigMap = rootAndCompanyCntMap.getOrDefault(ra, new HashMap<>());
-                Map<Integer, Integer> smallMap = rootAndCompanyCntMap.getOrDefault(rb, new HashMap<>());
-
-                for (int company : smallMap.keySet()) {
-                    int smallCount = smallMap.get(company);
-
-                    if (bigMap.containsKey(company)) {
-                        int bigCount = bigMap.get(company);
-                        companyPoint[company] += (long) w * smallCount * bigCount;
-                        bigMap.put(company, smallCount + bigCount);
-                    } else {
-                        bigMap.put(company, smallCount);
-                    }
-                }
-
-                rootAndCompanyCntMap.put(ra, bigMap);
+            if (getRoot(pow - 1, u) != getRoot(pow - 1, v)) {
+                pq.add(new int[]{u, v, c, range});
+            }
+            if (getRoot(pow - 1, (u + delta) % n) != getRoot(pow - 1, (v + delta) % n)){
+                pq.add(new int[]{(u + delta) % n, (v + delta) % n, c + delta, range});
             }
         }
     }
@@ -77,31 +63,32 @@ public class Main {
         inputArr = input.split(" ");
 
         n = Integer.parseInt(inputArr[0]);
-        k = Integer.parseInt(inputArr[1]);
-        m = Integer.parseInt(inputArr[2]);
-
-        input = br.readLine();
-        inputArr = input.split(" ");
-        for (int i = 1; i <= n; i++) {
-            owner[i] = Integer.parseInt(inputArr[i - 1]);
+        m = Integer.parseInt(inputArr[1]);
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= 17; j++) {
+                tree[j][i] = i;
+            }
         }
 
         for (int i = 0; i < m; i++) {
             input = br.readLine();
-            inputArr = input.split(" ");
+            StringTokenizer token = new StringTokenizer(input);
 
-            int a = Integer.parseInt(inputArr[0]);
-            int b = Integer.parseInt(inputArr[1]);
-            int w = Integer.parseInt(inputArr[2]);
+            u = Integer.parseInt(token.nextToken());
+            v = Integer.parseInt(token.nextToken());
+            c = Integer.parseInt(token.nextToken());
+            k = Integer.parseInt(token.nextToken());
 
-            pq.add(new int[]{w, a, b});
+            int pow = 31 - Integer.numberOfLeadingZeros(k);
+            int range = (int) Math.pow(2, pow);
+            int delta = k - range;
+
+            pq.add(new int[]{u, v, c, range});
+            pq.add(new int[]{(u + delta) % n, (v + delta) % n, c + delta, range});
         }
 
         mst();
+        System.out.println(conn == n - 1 ? w : -1);
 
-        for (int i = 1; i <= k; i++) {
-            bw.write(companyPoint[i] + "\n");
-        }
-        bw.flush();
     }
 }
