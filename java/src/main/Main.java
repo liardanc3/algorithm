@@ -9,51 +9,35 @@ public class Main {
     public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     public static String input;
     public static String[] inputArr;
-    public static int n, m, u, v, c, k, conn;
-    public static long w;
-    public static int[][] tree = new int[18][200001];
+    public static int n, p, conn;
+    public static int mn = Integer.MAX_VALUE;
+    public static long answer;
+    public static int[] tree = new int[10001];
+    public static int[] cost = new int[10001];
     public static PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[2]));
 
-    public static int getRoot(int pow, int i) {
-        while (tree[pow][i] != i) {
-            i = tree[pow][i] = tree[pow][tree[pow][i]];
+    public static int getRoot(int i) {
+        while(tree[i] != i) {
+            i = tree[i] = tree[tree[i]];
         }
-        return i;
+        return tree[i];
     }
 
     public static void mst() {
-        while (!pq.isEmpty() && conn < n - 1) {
+        while(!pq.isEmpty() && conn < n - 1) {
             int[] edge = pq.poll();
 
-            u = edge[0];
-            v = edge[1];
-            c = edge[2];
-            k = edge[3];
+            int a = edge[0];
+            int b = edge[1];
+            int w = edge[2];
 
-            int pow = 31 - Integer.numberOfLeadingZeros(k);
-            int ru = getRoot(pow, u);
-            int rv = getRoot(pow, v);
+            int ra = getRoot(a);
+            int rb = getRoot(b);
 
-            if (ru == rv) {
-                continue;
-            }
-
-            tree[pow][ru] = rv;
-
-            if (k == 1) {
+            if (ra != rb) {
+                tree[rb] = ra;
                 conn++;
-                w += c;
-                continue;
-            }
-
-            int range = (int) Math.pow(2, pow - 1);
-            int delta = k - range;
-
-            if (getRoot(pow - 1, u) != getRoot(pow - 1, v)) {
-                pq.add(new int[]{u, v, c, range});
-            }
-            if (getRoot(pow - 1, (u + delta) % n) != getRoot(pow - 1, (v + delta) % n)){
-                pq.add(new int[]{(u + delta) % n, (v + delta) % n, c + delta, range});
+                answer += w;
             }
         }
     }
@@ -63,32 +47,26 @@ public class Main {
         inputArr = input.split(" ");
 
         n = Integer.parseInt(inputArr[0]);
-        m = Integer.parseInt(inputArr[1]);
-        for (int i = 0; i <= n; i++) {
-            for (int j = 0; j <= 17; j++) {
-                tree[j][i] = i;
-            }
+        p = Integer.parseInt(inputArr[1]);
+
+        for (int i = 0; i < n; i++) {
+            cost[i + 1] = Integer.parseInt(br.readLine());
+            tree[i + 1] = i + 1;
+            mn = Math.min(mn, cost[i + 1]);
         }
 
-        for (int i = 0; i < m; i++) {
-            input = br.readLine();
-            StringTokenizer token = new StringTokenizer(input);
+        for (int i = 0; i < p; i++) {
+            StringTokenizer token = new StringTokenizer(br.readLine());
 
-            u = Integer.parseInt(token.nextToken());
-            v = Integer.parseInt(token.nextToken());
-            c = Integer.parseInt(token.nextToken());
-            k = Integer.parseInt(token.nextToken());
+            int a = Integer.parseInt(token.nextToken());
+            int b = Integer.parseInt(token.nextToken());
+            int w = Integer.parseInt(token.nextToken());
+            int ww = cost[a] + cost[b] + 2 * w;
 
-            int pow = 31 - Integer.numberOfLeadingZeros(k);
-            int range = (int) Math.pow(2, pow);
-            int delta = k - range;
-
-            pq.add(new int[]{u, v, c, range});
-            pq.add(new int[]{(u + delta) % n, (v + delta) % n, c + delta, range});
+            pq.add(new int[]{a, b, ww});
         }
 
         mst();
-        System.out.println(conn == n - 1 ? w : -1);
-
+        System.out.println(answer + mn);
     }
 }
