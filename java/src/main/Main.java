@@ -1,49 +1,67 @@
 package main;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main {
 
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    public static long n, k, q;
+    public static int n, m, k, answer, conn;
+    public static int[] tree = new int[1001];
+    public static PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparing(a -> a[0]));
+
+    public static int getRoot(int i) {
+        return (tree[i] == i) ? i : (tree[i] = getRoot(tree[i]));
+    }
+
+    public static void mst() {
+        while (!pq.isEmpty() && conn < n) {
+            int[] edges = pq.poll();
+
+            int w = edges[0];
+            int a = edges[1];
+            int b = edges[2];
+
+            int ra = getRoot(a);
+            int rb = getRoot(b);
+
+            if (ra != rb) {
+                tree[ra] = rb;
+                conn++;
+                answer += w;
+            }
+        }
+    }
 
     public static void main(String[] args) throws IOException {
         StringTokenizer input = new StringTokenizer(br.readLine());
 
-        // (N+1)/K = parent
-        // logN / logK = depth
-        n = Long.parseLong(input.nextToken());
+        n = Integer.parseInt(input.nextToken());
+        m = Integer.parseInt(input.nextToken());
         k = Integer.parseInt(input.nextToken());
-        q = Integer.parseInt(input.nextToken());
+        conn = k - 1;
 
-        for (int i = 0; i < q; i++) {
-            input = new StringTokenizer(br.readLine());
+        input = new StringTokenizer(br.readLine());
 
-            long x = Long.parseLong(input.nextToken());
-            long y = Long.parseLong(input.nextToken());
-
-            if (k == 1) {
-                bw.write(Math.abs(x - y) + "\n");
-                continue;
-            }
-
-            long dist = 0;
-            while (x != y) {
-                dist++;
-                if (x > y) {
-                    x = (x - 2) / k + 1;
-                } else {
-                    y = (y - 2) / k + 1;
-                }
-            }
-
-            bw.write((dist) + "\n");
+        for (int i = 0; i <= n; i++) {
+            tree[i] = i;
+        }
+        for (int i = 0; i < k; i++) {
+            tree[Integer.parseInt(input.nextToken())] = 0;
         }
 
-        bw.flush();
+        for (int i = 0; i < m; i++) {
+            input = new StringTokenizer(br.readLine());
+
+            int u = Integer.parseInt(input.nextToken());
+            int v = Integer.parseInt(input.nextToken());
+            int w = Integer.parseInt(input.nextToken());
+
+            pq.add(new int[]{w, u, v});
+        }
+
+        mst();
+        System.out.println(answer);
     }
 }
