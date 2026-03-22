@@ -3,7 +3,7 @@ package main;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class _1671 {
 
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -82,7 +82,7 @@ public class Main {
     public static boolean isStrongerThan(int a, int b) {
         return stat[0][a] >= stat[0][b] && stat[1][a] >= stat[1][b] && stat[2][a] >= stat[2][b];
     }
-    
+
     public static boolean isEqual(int a, int b) {
         return stat[0][a] == stat[0][b] && stat[1][a] == stat[1][b] && stat[2][a] == stat[2][b];
     }
