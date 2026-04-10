@@ -2,7 +2,7 @@ package main;
 
 import java.io.*;
 
-public class Main {
+public class _2493 {
 
     static FastScanner fs = new FastScanner(System.in);
     static FastOutput out = new FastOutput();
