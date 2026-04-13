@@ -3,7 +3,7 @@ package main;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _25345 {
 
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
