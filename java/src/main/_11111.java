@@ -3,7 +3,7 @@ package main;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class _11111 {
 
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -111,12 +111,12 @@ public class Main {
                 int cost = node.cost;
 
                 if (capacity > 0 && (dist[now] + cost > dist[next] || dist[next] == INF)) {
-                   dist[next] = dist[now] + cost;
+                    dist[next] = dist[now] + cost;
 
-                   if (inQ[next] == 0) {
-                       inQ[next] = 1;
-                       q.add(next);
-                   }
+                    if (inQ[next] == 0) {
+                        inQ[next] = 1;
+                        q.add(next);
+                    }
                 }
             }
         }
