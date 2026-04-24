@@ -1,9 +1,7 @@
-package main;
-
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class _11410 {
 
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static StringTokenizer st;
@@ -43,7 +41,6 @@ public class Main {
 
         n = Integer.parseInt(st.nextToken());
         p = Integer.parseInt(st.nextToken());
-        sink = n;
 
         for (int i = 1; i <= n - 1; i++) {
             st = new StringTokenizer(br.readLine());
@@ -63,7 +60,7 @@ public class Main {
     }
 
     public static void makeGraph() {
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < 50; i++) {
             addEdge(i, i + 1, p, 0);
         }
 
