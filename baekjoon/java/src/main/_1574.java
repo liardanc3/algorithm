@@ -3,7 +3,7 @@ package main;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class _1574 {
 
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
